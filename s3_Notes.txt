@@ -1,0 +1,111 @@
+
+S3 Data Consistency Model:
+1)Read-After-Write Consistency
+2)Eventual Consistency
+
+1)Read-After-Write Consistency:
+	-Strong Consistency 
+	-onece data is uploaded in perticular region,  then It never leaves the region.
+	-For New  writes/Inserts . NEW PUTs
+If we upload a file into s3 bucket ,the file will be copied/replicated across the multiple az's in the same region.
+
+2)Eventual Consistency
+	-For Updates and deletes 
+	-If we did any modifications to a file in one data center and some one 
+         trying to access same file from another data center they may not get updated one.
+         after some time modified file replicates to all data center.
+         It is known as Eventual Consistency.
+
+-We can mention during read consistence read or eventual consistence read.
+-In case of consistence read,s3 will check all the data centers and returns the most updated data.
+
+Availability refers to system uptime,
+Durability refers to long-term data protection
+
+
+----------------------------------------------------
+1) Bucket Creation,deletion,object deletion,object level permission .
+
+  How to restore the objects
+
+2) Versioning
+
+3) Requester pays
+
+4) Transfer Acceleration
+
+5) Server Access Logs
+
+6) KMS --- Encription
+
+7) Static website hosting
+
+8) Lifecycle 
+
+9) CRR - CrossRegion Replica
+
+10) Multipart uploading
+
+11) S3 access in public EC2
+
+12) S3 Access in private EC2
+
+13) Accessing private EC2 by using roles (SSM)
+==================================================
+
+bucket creation :  private mode ----> public mode
+
+  region selection
+  unique 
+ name
+ rules
+object  storage :  private mode
+
+ Storage classes :
+
+1)Standard
+2)STD_IA
+3)one zone_IA
+4)intelligent tier
+5)Glacier
+6)deep Glacier
+7)RRS
+
+Durability : How long data can be stored 99.999999999% (11 nines) 
+
+Availability : How quickly it is responding to you  99.99%
+
+ 
+-------------------------------------------------------------
+
+1) standard 
+2) standard_IA
+3) onezone_IA
+4) intelligent tier
+5) Glacier
+6) deep Glacier
+7) RRS
+
+
+bucket created in private mode
+
+             objects are private
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
